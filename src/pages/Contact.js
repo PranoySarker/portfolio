@@ -1,6 +1,21 @@
 import React from 'react';
+import emailjs from '@emailjs/browser';
+
 
 const Contact = () => {
+    const sendEmail = (e) => {
+
+        e.preventDefault();
+
+        emailjs.sendForm('service_2tevw8g', 'template_dz4pnph', e.target, '1MT23fNVdrikUTn8T')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+        e.target.reset();
+    }
+
     return (
         <div className='mt-5'>
             <div class="hero min-h-screen bg-base-100">
@@ -11,18 +26,20 @@ const Contact = () => {
                     </div>
                     <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <div class="card-body">
-                            <div class="form-control">
-                                <input type="text" placeholder="Your email" class="input input-bordered" />
-                            </div>
-                            <div class="form-control">
-                                <input type="text" placeholder="Your subject" class="input input-bordered" />
-                            </div>
-                            <div class="form-control">
-                                <textarea placeholder="type your message here" class="input input-bordered" />
-                            </div>
-                            <div class="form-control mt-6">
-                                <button class="btn btn-secondary text-white">Contact Me</button>
-                            </div>
+                            <form onSubmit={sendEmail}>
+                                <div class="form-control mb-3">
+                                    <input type="text" name='email' placeholder="Your email" class="input input-bordered" required />
+                                </div>
+                                <div class="form-control mb-3">
+                                    <input type="text" name='name' placeholder="Your Name" class="input input-bordered" required />
+                                </div>
+                                <div class="form-control">
+                                    <textarea placeholder="type your message here" name='message' class="input input-bordered" required />
+                                </div>
+                                <div class="form-control mt-6">
+                                    <input type="submit" className='btn btn-secondary text-white' value="Message Me" />
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
