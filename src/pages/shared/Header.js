@@ -13,7 +13,7 @@ const Header = () => {
                 </div>
                 <div className="flex-none">
                     <ul className="menu menu-horizontal p-0">
-                        <li><button className='btn btn-primary'>Download Resume</button></li>
+                        <li><button className='btn btn-primary'><a href="https://drive.google.com/file/d/1ekbTRcRraT8nCuTiTQALD0wpRESDCzzI/view?usp=sharing" target='_blank'>Download Resume</a></button></li>
 
                     </ul>
                 </div>
