@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
-        <div>
-            <div className="navbar bg-secondary bg-opacity-50 text-white shadow-2xl z-10 absolute">
+        <div className='relative'>
+            <div className="navbar bg-secondary bg-opacity-50 text-white shadow-2xl z-10 fixed top-0 left-0 right-0">
                 <div className="flex-1">
                     <ul className="menu menu-horizontal p-0">
                         <li className='font-bold uppercase'><Link to='/'>Home</Link></li>
-                        <li className='font-bold uppercase'><Link to='/projects'>projects</Link></li>
+                        <li className='font-bold uppercase disabled'><Link to='/projects' disable>projects</Link></li>
                     </ul>
                 </div>
                 <div className="flex-none">
