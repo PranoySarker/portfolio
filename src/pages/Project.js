@@ -5,7 +5,7 @@ const Project = ({ project }) => {
     const { _id, name, image1 } = project;
 
     return (
-        <div className='mt-5'>
+        <div className='mt-5 '>
             <div className="card w-96 bg-base-100 shadow-xl">
                 <figure><img src={image1} alt="project" style={{ 'height': '500px', 'width': '300px' }} /></figure>
                 <div className="card-body">

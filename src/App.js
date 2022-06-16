@@ -10,7 +10,7 @@ import Blog from './pages/Blog';
 
 function App() {
   return (
-    <div>
+    <div className='overflow-x-hidden'>
       <Header></Header>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
