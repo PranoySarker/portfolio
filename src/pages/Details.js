@@ -33,7 +33,7 @@ const Details = () => {
                     <h2 className='text-xl font-semibold text-center'>Product Page Image</h2>
                     <figure><img src={detail[0]?.image2} alt='img' /></figure>
                 </div>
-                <div className="card card-compact w-2/3 bg-base-100 shadow-xl mx-auto">
+                <div className="card card-compact w-2/3 bg-base-100 shadow-xl mx-auto mb-10">
                     <h2 className='text-xl font-semibold text-center'>Order Page Image</h2>
                     <figure><img src={detail[0]?.image3} alt='img' /></figure>
                 </div>
