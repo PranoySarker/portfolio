@@ -8,7 +8,7 @@ const Header = () => {
                 <div className="flex-1">
                     <ul className="menu menu-horizontal p-0">
                         <li className='font-bold uppercase'><Link to='/'>Home</Link></li>
-                        <li className='font-bold uppercase ' id='projects'><Link to=''>projects</Link></li>
+                        <li className='font-bold uppercase '><Link to='/blog'>Blog</Link></li>
                     </ul>
                 </div>
                 <div className="flex-none">
